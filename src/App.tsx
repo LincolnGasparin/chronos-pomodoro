@@ -1,4 +1,8 @@
-import { Heading } from './components/Heading';
+import { Menu } from './components/Menu';
+import { Container } from './components/Container';
+import { Logo } from './components/Logo';
+import { CountDown } from './components/CountDown';
+import { DefaultInput } from './components/DefaultInput';
 
 import './styles/global.css';
 import './styles/thema.css';
@@ -6,17 +10,38 @@ import './styles/thema.css';
 export function App() {
   return (
     <>
-      <Heading>Chronos Pomodoro</Heading>
-      <div>
-        <h2>Timer</h2>
-        <p>00:00</p>
-      </div>
-      <div>
-        <h2>Controls</h2>
-        <button>Start</button>
-        <button>Pause</button>
-        <button>Reset</button>
-      </div>
+      <Container>
+        <Logo />
+      </Container>
+
+      <Container>
+        <Menu />
+      </Container>
+
+      <Container>
+        <CountDown />
+      </Container>
+
+      <Container>
+        <form className='form' action=''>
+          <div className='formRow'>
+            <DefaultInput labelText='task' id='meuInput' type='text' />
+          </div>
+
+          <div className='formRow'>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+
+          <div className='formRow'>
+            <p>clicos</p>
+            <p>0 0 0 0 0 0 0 0</p>
+          </div>
+
+          <div className='formRow'>
+            <button>start</button>
+          </div>
+        </form>
+      </Container>
     </>
   );
 }
