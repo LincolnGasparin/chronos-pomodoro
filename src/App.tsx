@@ -3,9 +3,13 @@ import { Container } from './components/Container';
 import { Logo } from './components/Logo';
 import { CountDown } from './components/CountDown';
 import { DefaultInput } from './components/DefaultInput';
+import { Cycles } from './components/Cycles';
+import { DefaultButton } from './components/DefaultButton/Index';
+import { PlayCircleIcon } from 'lucide-react';
 
 import './styles/global.css';
 import './styles/thema.css';
+import { Footer } from './components/Footer';
 
 export function App() {
   return (
@@ -33,14 +37,16 @@ export function App() {
           </div>
 
           <div className='formRow'>
-            <p>clicos</p>
-            <p>0 0 0 0 0 0 0 0</p>
+            <Cycles />
           </div>
 
           <div className='formRow'>
-            <button>start</button>
+            <DefaultButton color='green' icon={<PlayCircleIcon />} />
           </div>
         </form>
+      </Container>
+      <Container>
+        <Footer />
       </Container>
     </>
   );
